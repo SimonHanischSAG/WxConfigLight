@@ -2,3 +2,4 @@
 **/*.class
 **/*.frag
 /classes/
+/bin/
