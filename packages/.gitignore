@@ -1,3 +1,4 @@
 **/*.bak
 **/*.class
 **/*.frag
+/classes/
