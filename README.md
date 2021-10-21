@@ -12,7 +12,9 @@ please switch to the official WxConfig.
 In order to use a wxconfig.cnf file like with the official WxConfig like this:
 ******
 myKey=myValue
+
 myList=1
+
 myList=2
 ******
 
@@ -27,6 +29,7 @@ WxConfigLight__MyPackage__myList__: 1
 WxConfigLight__MyPackage__myList__1: 2
 
 After loading that one time you can now work on these Global Variables like you are used to. 
+
 <b>Consider that two underlines ("__") are a reserved string. Do not use that in your package names and keys!</b>
 
 Hint: You can drop that stuff if you want with
