@@ -38,8 +38,10 @@ http://localhost:5555/invoke/wx.config.admin:clearAllVariablesOfPackage?wxConfig
 
 <h3>Public services</h3>
 
-<li>wx.config.pub:addValue</li>
+<ul>
+  <li>wx.config.pub:addValue</li>
 <li>wx.config.pub:getValue</li>
+  </ul>
 wx.config.pub:getValueList
 wx.config.pub:removeValue
 wx.config.pub:updateValue
