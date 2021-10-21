@@ -35,3 +35,11 @@ After loading that one time you can now work on these Global Variables like you 
 Hint: You can drop that stuff if you want with
 
 http://localhost:5555/invoke/wx.config.admin:clearAllVariablesOfPackage?wxConfigPkgName=MyPackage
+
+<h3>Public services</h3>
+
+wx.config.pub:addValue
+wx.config.pub:getValue
+wx.config.pub:getValueList
+wx.config.pub:removeValue
+wx.config.pub:updateValue
