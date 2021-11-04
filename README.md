@@ -5,6 +5,20 @@ please switch to the official WxConfig.
 
 <h2>How to use</h2>
 
+<h3>Deploy/checkout WxConfig</h3>
+
+Check under releases for a proper release and deploy it. Otherwise you can check out the latest version from GIT and create a link like this:
+
+mklink /J F:\\SoftwareAG\\IntegrationServer\\instances\\default\\packages\\WxConfig F:\\GIT-Repos\\WxConfig\\packages\\WxConfig
+
+<h4>Build & Reload</h4>
+
+If you checkout the sources from GitHub you have to compile the source, e.g. with:
+
+C:\SoftwareAG\IntegrationServer\instances\default\bin\jcode.bat makeall WxConfig
+
+Reload WxConfig
+
 <h3>Global variables</h3>
 
 <b>The most important thing to say is: WxConfigLight is using the "Global Variables" from IntegrationServer. That is the place where updates are executed and where keys are red from!</b>
