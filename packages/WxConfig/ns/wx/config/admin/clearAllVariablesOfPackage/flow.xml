@@ -135,7 +135,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="wx.config.impl:matches" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="wx.config.impl.util:matches" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
