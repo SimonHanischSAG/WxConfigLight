@@ -32,6 +32,7 @@ DEV, CI, TEST, UAT, QA, PROD
 in order to use references like this in your file <MyPackage>/config/wxconfig.cnf:
 
 wx.config.env.PROD=wxconfig-PROD.cnf
+  
 wx.config.env.TEST=../../../config/packages/<MyPackage>/wxconfig-TEST.cnf
   
 Then you can define environment specific values which are part of your package or outside or your package.
