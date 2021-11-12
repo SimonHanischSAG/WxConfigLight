@@ -19,6 +19,23 @@ C:\SoftwareAG\IntegrationServer\instances\default\bin\jcode.bat makeall WxConfig
 
 Reload WxConfig
 
+<h4>Configure Environment</h4>
+
+You should configure your environmentType like this:
+
+WxConfigLight__WxConfigLight__wx.config.environment.type
+
+with values e.g. like:
+
+DEV, CI, TEST, UAT, QA, PROD
+
+in order to use references like this in your file <MyPackage>/config/wxconfig.cnf:
+
+wx.config.env.PROD=wxconfig-PROD.cnf
+wx.config.env.TEST=../../../config/packages/<MyPackage>/wxconfig-TEST.cnf
+  
+Then you can define environment specific values which are part of your package or outside or your package.
+
 <h3>Global variables</h3>
 
 <b>The most important thing to say is: WxConfigLight is using the "Global Variables" from IntegrationServer. That is the place where updates are executed and where keys are red from!</b>
