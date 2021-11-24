@@ -70,11 +70,15 @@ http://localhost:5555/invoke/wx.config.admin:clearAllVariablesOfPackage?wxConfig
 
 <h3>Public services</h3>
 
+The following public service should be compatible to the official version (if it works in WxConfigLight it should also work in WxConfig, but not vice versa):
+  
 <ul>
   <li>wx.config.pub:addValue</li>
+  <li>wx.config.pub:getEnvironmentType</li>
   <li>wx.config.pub:getValue</li>
   <li>wx.config.pub:getValueList</li>
   <li>wx.config.pub:removeValue</li>
-  <li>wx.config.pub:updateValue
-</li>
+  <li>wx.config.pub:updateValue</li>
+  <li>wx.config.pub.autoSetup:_all: Supports only messaging</li>
+  <li>wx.config.pub.autoSetup:messaging: Supports only triggers</li>
 </ul>
