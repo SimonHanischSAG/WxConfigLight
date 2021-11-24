@@ -59,30 +59,6 @@ public final class util
 
 
 
-	public static final void sleep (IData pipeline)
-        throws ServiceException
-	{
-		// --- <<IS-START(sleep)>> ---
-		// @sigtype java 3.5
-		// [i] field:0:required milliseconds
-		IDataCursor pipelineCursor = pipeline.getCursor();
-		Integer sleepTimeInMilliSeconds = IDataUtil.getInt(pipelineCursor, "milliseconds", -1);
-		pipelineCursor.destroy();
-		
-		if (sleepTimeInMilliSeconds != -1){
-		try {
-				Thread.sleep(sleepTimeInMilliSeconds);
-			} catch (InterruptedException e) {
-				throw new ServiceException(e);
-			}
-		}
-		// --- <<IS-END>> ---
-
-                
-	}
-
-
-
 	public static final void splitConfigLine (IData pipeline)
         throws ServiceException
 	{
