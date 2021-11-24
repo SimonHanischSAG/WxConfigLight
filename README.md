@@ -19,7 +19,7 @@ C:\SoftwareAG\IntegrationServer\instances\default\bin\jcode.bat makeall WxConfig
 
 Reload WxConfig
 
-<h4>Configure Environment</h4>
+<h3>Configure Environment</h3>
 
 You should configure your environmentType like this:
 
