@@ -42,13 +42,14 @@ Then you can define environment specific values which are part of your package o
 <b>The most important thing to say is: WxConfigLight is using the "Global Variables" from IntegrationServer. That is the place where updates are executed and where keys are red from!</b>
 
 In order to use a wxconfig.cnf file like with the official WxConfig like this:
-******
+```
 myKey=myValue
 
+myPassword=[[encrypted:myPassword]]
+  
 myList=1
-
 myList=2
-******
+```
 
 you have to run
 
@@ -57,6 +58,7 @@ http://localhost:5555/invoke/wx.config.admin:replaceVariablesWithGlobalFile?wxCo
 It will create Global Variables like this:
 
 WxConfigLight__MyPackage__myKey: myValue
+WxConfigLight__MyPackage__myPassword: ****** (manage -> overwrite)
 WxConfigLight__MyPackage__myList__: 1
 WxConfigLight__MyPackage__myList__1: 2
 
