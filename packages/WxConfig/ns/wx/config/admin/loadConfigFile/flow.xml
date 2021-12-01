@@ -923,7 +923,20 @@
 </MAP>
 </INVOKE>
 
-<BRANCH TIMEOUT="" SWITCH="/keyFromFile">
+<BRANCH TIMEOUT="" SWITCH="/valueFromFile">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>value null? -&gt; skip</COMMENT>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>value empty string? -&gt; skip</COMMENT>
+</MAP>
+
+<BRANCH NAME="$default" TIMEOUT="" SWITCH="/keyFromFile">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -2934,6 +2947,7 @@
 </BRANCH>
 </BRANCH>
 </BRANCH>
+</BRANCH>
 
 <MAP TIMEOUT="" MODE="STANDALONE">
   <COMMENT>clean</COMMENT>
@@ -3039,6 +3053,10 @@
 </MAP>
 </SEQUENCE>
 </BRANCH>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+</MAP>
 </LOOP>
 
 <MAP TIMEOUT="" MODE="STANDALONE">

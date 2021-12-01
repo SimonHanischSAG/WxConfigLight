@@ -45,6 +45,7 @@ public final class util
 		replaceReferencesWithValuesRecursive(wxConfigPkgName, autoSetupCfg); 
 			
 			
+			
 		// --- <<IS-END>> ---
 
                 
@@ -68,6 +69,10 @@ public final class util
 					if (groupCount == 1) {
 						String group = matcher.group(1);
 						String value = getValue(wxConfigPkgName, group, "true",  null,  null,  null,  null);
+						// value not configured? -> use empty string
+						if (value == null) {
+							value = "";
+						}
 						valueString = valueString.replace(matcher.group(), value);
 						iDataMap.put(key, valueString);
 					}
@@ -123,6 +128,7 @@ public final class util
 		} catch (Exception e) {
 		}
 	}	
+		
 		
 		
 	// --- <<IS-END-SHARED>> ---
