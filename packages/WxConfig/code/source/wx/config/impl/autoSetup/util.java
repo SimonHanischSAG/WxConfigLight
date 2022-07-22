@@ -7,6 +7,7 @@ import com.wm.util.Values;
 import com.wm.app.b2b.server.Service;
 import com.wm.app.b2b.server.ServiceException;
 // --- <<IS-START-IMPORTS>> ---
+import com.wm.util.JournalLogger;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,6 +47,7 @@ public final class util
 			
 			
 			
+			
 		// --- <<IS-END>> ---
 
                 
@@ -67,8 +69,26 @@ public final class util
 				while (matcher.find()) {
 					int groupCount = matcher.groupCount();
 					if (groupCount == 1) {
-						String group = matcher.group(1);
-						String value = getValue(wxConfigPkgName, group, "true",  null,  null,  null,  null);
+						String extractedValueString = matcher.group(1);
+						//debugLogInfo("extractedValueString: " + extractedValueString);
+						Pattern patternPkg = Pattern.compile("pkg:([^;]*);(.*)");
+						Matcher matcherPkg = patternPkg.matcher(extractedValueString);
+						
+						String pkgName = null;
+						String keyName = null;
+						if (matcherPkg.find()) {
+							// ${pkg:...;...}
+							//debugLogInfo("replace: pkg");
+							pkgName = matcherPkg.group(1);
+							keyName = matcherPkg.group(2);
+						} else {
+							pkgName = wxConfigPkgName;
+							keyName = extractedValueString;
+						}
+						//debugLogInfo("replace: " + pkgName + ", " + keyName);
+						
+						String value = getValue(pkgName, keyName, "true",  null,  null,  null,  null);
+						//debugLogInfo("value: " + value);
 						// value not configured? -> use empty string
 						if (value == null) {
 							value = "";
@@ -116,18 +136,15 @@ public final class util
 		return propertyValue;
 	}
 	
-	public static void log(String message) {
-		// input
-		IData input = IDataFactory.create();
-		IDataCursor inputCursor = input.getCursor();
-		IDataUtil.put(inputCursor, "message", message);
-		inputCursor.destroy();
+			
+	private static final String LOG_FUNCTION = "WxConfigLight";
+	private static void debugLogError(String message) {
+	    JournalLogger.log(4,  JournalLogger.FAC_FLOW_SVC, JournalLogger.ERROR, LOG_FUNCTION, message);
+	}
 	
-		try {
-			Service.doInvoke("pub.flow", "debugLog", input);
-		} catch (Exception e) {
-		}
-	}	
+	private static void debugLogInfo(String message) {
+	    JournalLogger.log(4,  JournalLogger.FAC_FLOW_SVC, JournalLogger.INFO, LOG_FUNCTION, message);
+	}
 		
 		
 		
