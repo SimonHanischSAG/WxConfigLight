@@ -868,6 +868,17 @@
         </array>
         <value name="modifiable">true</value>
       </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">status</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
     </array>
     <value name="modifiable">true</value>
   </record>
@@ -880,6 +891,9 @@
 </MAPDELETE>
 
 <MAPDELETE FIELD="/wxConfigPkgName;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/status;1;0">
 </MAPDELETE>
 </MAP>
 </FLOW>
