@@ -3,6 +3,8 @@ Lightweight and free webMethods IntegrationServer package with a similar but ver
 It is designed for a simple and downward compatible introduction into configuration management like WxConfig is doing that. For advanced usage
 please switch to the official WxConfig.
 
+<img src="resources/WxConfigLight.png" alt="WxConfigLight.png" />
+
 <h2>How to use</h2>
 
 <h3>Deploy/checkout WxConfig</h3>
