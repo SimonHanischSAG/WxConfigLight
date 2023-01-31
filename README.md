@@ -1,6 +1,6 @@
 # WxConfigLight
-Lightweight and free webMethods IntegrationServer package with a simialar but very reduced API like the official and the one and only WxConfig.
-It is designed for a simple introduction into configuration management. For advanced usage
+Lightweight and free webMethods IntegrationServer package with a similar but very reduced API like the official and the one and only WxConfig.
+It is designed for a simple and downward compatible introduction into configuration management like WxConfig is doing that. For advanced usage
 please switch to the official WxConfig.
 
 <h2>How to use</h2>
