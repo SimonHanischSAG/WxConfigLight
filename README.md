@@ -60,12 +60,14 @@ http://localhost:5555/invoke/wx.config.admin:replaceVariablesWithGlobalFile?wxCo
 
 It will create Global Variables like this:
 
+```
 WxConfigLight__MyPackage__myKey: myValue
 WxConfigLight__MyPackage__myPassword: ****** (manage -> overwrite)
 WxConfigLight__MyPackage__myList: 0
 WxConfigLight__MyPackage__myList__1: 1
 WxConfigLight__MyPackage__myList__2: 2
-
+```
+  
 After loading that one time you can now work on these Global Variables like you are used to. 
 
 <b>Consider that two underlines ("__") are a reserved string. Do not use that in your package names and keys!</b>
