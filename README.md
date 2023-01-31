@@ -49,6 +49,7 @@ myKey=myValue
 
 myPassword=[[encrypted:myPassword]]
   
+myList=0
 myList=1
 myList=2
 ```
@@ -61,8 +62,9 @@ It will create Global Variables like this:
 
 WxConfigLight__MyPackage__myKey: myValue
 WxConfigLight__MyPackage__myPassword: ****** (manage -> overwrite)
-WxConfigLight__MyPackage__myList__: 1
-WxConfigLight__MyPackage__myList__1: 2
+WxConfigLight__MyPackage__myList: 0
+WxConfigLight__MyPackage__myList__1: 1
+WxConfigLight__MyPackage__myList__2: 2
 
 After loading that one time you can now work on these Global Variables like you are used to. 
 
