@@ -9,13 +9,13 @@ please switch to the official WxConfig.
 
 <h3>Deploy/checkout WxConfig</h3>
 
-Check under releases for a proper release and deploy it. Otherwise you can check out the latest version from GIT and create a link like this:
+Check under releases for a proper release and deploy it. Otherwise you can check out the latest version from GIT and create a link (for Windows) like this:
 
 mklink /J F:\\SoftwareAG\\IntegrationServer\\instances\\default\\packages\\WxConfig F:\\GIT-Repos\\WxConfig\\packages\\WxConfig
 
 <h4>Build & Reload</h4>
 
-If you checkout the sources from GitHub you have to compile the source, e.g. with:
+If you checkout the sources from GitHub you have to compile the source, e.g. for Windows with:
 
 C:\SoftwareAG\IntegrationServer\instances\default\bin\jcode.bat makeall WxConfig
 
