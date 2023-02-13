@@ -41,7 +41,7 @@ Then you can define environment specific values which are part of your package o
 
 <h3>Global variables</h3>
 
-<b>The most important thing to say is: WxConfigLight is using the "Global Variables" from IntegrationServer. That is the place where updates are executed and where keys are red from!</b>
+<b>The most important thing to say is: WxConfigLight is using the "Global Variables" from IntegrationServer. That is the place where updates are executed and where keys are red from during runtime! As keys are therefore redundant in your IS (file and Global Varialbes) you have to be careful regarding how you change your keys persistently.</b>
 
 In order to use a wxconfig.cnf file like with the official WxConfig like this:
 ```
